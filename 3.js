@@ -1,6 +1,6 @@
 var Hapi = require('hapi');
 var Inert = require('inert');
-var path = require('path');
+var Path = require('path');
 var server = new Hapi.Server();
 
 server.register(Inert, function(err) {
@@ -14,7 +14,7 @@ server.connection({
 
 
 server.route({path: '/', method:'GET', handler: {
-    file: path.join(__dirname, '/index.html')
+    file: Path.join(__dirname, '/index.html')
   }
 });
 
